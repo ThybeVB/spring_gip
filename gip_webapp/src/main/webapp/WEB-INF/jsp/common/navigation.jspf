@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+	<div class="container-fluid">
+	   <a class="navbar-brand" href="https://www.guldensporencollege.be/">Gusco</a>
+	
+	   <div class="collapse navbar-collapse" id="navbar">
+		<ul class="navbar-nav me-auto">
+		   <li class="nav-item"><a class="nav-link active" href="/welcome">Home</a></li>
+		   <li class="nav-item"><a class="nav-link" href="/list-todos">Todos</a></li>
+		</ul>
+		
+		<ul class="navbar-nav">
+		   <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+		</ul>
+						
+	   </div>
+	</div>
+</nav>
