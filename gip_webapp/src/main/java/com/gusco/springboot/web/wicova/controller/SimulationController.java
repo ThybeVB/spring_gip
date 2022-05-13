@@ -3,8 +3,8 @@ package com.gusco.springboot.web.wicova.controller;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
+//import org.springframework.security.core.context.SecurityContextHolder;
+//import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -25,10 +25,10 @@ public class SimulationController {
 	@RequestMapping(value = "/list-sims", method = RequestMethod.GET)
 	public String showSimsPage(ModelMap model) {
 
-		String name = getLoggedInUsername(model);
+		//String name = getLoggedInUsername(model);
 		
-		model.put("sims", service.retrieveSims(name));
-		model.put("name", getLoggedInUsername(model));
+		//model.put("sims", service.retrieveSims(name));
+		//model.put("name", getLoggedInUsername(model));
 		
 		return "list-sims";
 	}
@@ -41,7 +41,7 @@ public class SimulationController {
 
 	@RequestMapping(value = "/simulation", method = RequestMethod.GET)
 	public String showAddSimPage(ModelMap model, Simulation sim) {
-		model.addAttribute("sim", new Simulation(0, getLoggedInUsername(model), 0, 0, 0, 0));
+		//model.addAttribute("sim", new Simulation(0, getLoggedInUsername(model), 0, 0, 0, 0));
 		return "simulation";
 	}
 
@@ -50,8 +50,8 @@ public class SimulationController {
 		if (result.hasErrors()) {
 			return "simulation";
 		}
-		String name = getLoggedInUsername(model);
-		service.addSimulation(name, sim.getKapitaal(), sim.getLoopTijd(), sim.getJaarRente());
+		//String name = getLoggedInUsername(model);
+		//service.addSimulation(name, sim.getKapitaal(), sim.getLoopTijd(), sim.getJaarRente());
 		return "redirect:/list-sims";
 	}
 
@@ -69,19 +69,19 @@ public class SimulationController {
 			return "update-simulation";
 		}
 
-		sim.setUser(getLoggedInUsername(model));
+		//sim.setUser(getLoggedInUsername(model));
 		service.updateSim(sim);
 		
 		return "redirect:/list-sims";
 	}
 
-	private String getLoggedInUsername(ModelMap model) {
+	/*private String getLoggedInUsername(ModelMap model) {
 		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		if (principal instanceof UserDetails) {
 			return ((UserDetails) principal).getUsername();
 		}
 		return principal.toString();
-	}
+	}*/
 
 
 }
