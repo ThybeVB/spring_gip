@@ -1,10 +1,7 @@
-<%@ include file="common/header.jspf" %>
-<%@ include file="common/navigation.jspf" %>
-
+<%@include file="common/header.jspf"%>
+<%@include file="common/navigation.jspf"%>
 <div class="container">
-
-	An error occured! Please contact support.
-	
+	An error occured! Please contact support
 </div>
 
-<%@ include file="common/footer.jspf" %>
+<%@include file="common/footer.jspf"%>

@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.gusco.springboot.web.first-webapplication618' is invalid and this project uses 'com.gusco.springboot.web.firstwebapplication618' instead.
+* The original package name 'com.gusco.springboot.web.first-webapplication619' is invalid and this project uses 'com.gusco.springboot.web.firstwebapplication619' instead.
 
 # Getting Started
 
@@ -11,8 +11,8 @@ For further reference, please consider the following sections:
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
 * [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.5.9/maven-plugin/reference/html/)
 * [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.5.9/maven-plugin/reference/html/#build-image)
-* [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/2.6.3/reference/htmlsingle/#using-boot-devtools)
 * [Spring Web](https://docs.spring.io/spring-boot/docs/2.6.3/reference/htmlsingle/#boot-features-developing-web-applications)
+* [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/2.6.3/reference/htmlsingle/#using-boot-devtools)
 
 ### Guides
 The following guides illustrate how to use some features concretely:
