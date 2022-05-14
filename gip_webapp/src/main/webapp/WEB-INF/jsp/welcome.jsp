@@ -3,11 +3,9 @@
 <div class="container">
 
 	<c:if test="${name != null}">
-		<p>abc</p>
+		<p>Welkom ${name}!</p>
 	</c:if>
-	<p>
-		Welkom ${name}!! <a href="/list-sims">Klik hier</a> om een simulatie te maken.
-	</p>
+	<a href="/list-sims">Klik hier</a> om een simulatie te maken.
 </div>
 
 <%@include file="common/footer.jspf"%>
