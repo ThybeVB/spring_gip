@@ -1,11 +1,13 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark mb-3">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="https://www.guldensporencollege.be/">Gusco</a>
+		<a class="navbar-brand" href="/welcome">WicovaAirplanes</a>
 
 		<div class="collapse navbar-collapse" id="navbar">
 			<ul class="navbar-nav me-auto">
 				<li class="nav-item"><a class="nav-link active" href="/welcome">Home</a></li>
-				<li class="nav-item"><a class="nav-link" href="/list-sims">Simulaties</a></li>
+				<!--<li class="nav-item"><a class="nav-link" href="/list-sims">Simulaties</a></li> -->
+				<li class="nav-item"><a class="nav-link" href="/list-planes">Shop</a></li>
+				<li class="nav-item"><a class="nav-link" href="/contact">Contacteer ons</a></li>
 			</ul>
 			<c:if test="${name != null}">
 				<ul class="navbar-nav">
