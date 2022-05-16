@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.gusco.springboot.web.wicova.model.Airplane;
-import com.gusco.springboot.web.wicova.model.Simulation;
 import com.gusco.springboot.web.wicova.service.PlaneService;
 
 @Controller
@@ -29,9 +28,16 @@ public class PlaneController {
 		return "list-planes";
 	}
 	
+	@RequestMapping(value="/plane-annuity-dialog", method = RequestMethod.GET)
+	public String showAnnuityDialog(ModelMap model, @RequestParam int id) {
+		Airplane plane = service.retrievePlane(id);
+		model.put("plane", plane);
+		return "plane-annuity-dialog";
+	}
+	
 	@RequestMapping(value = "/add-plane", method = RequestMethod.GET)
 	public String showAddPlanePage(ModelMap model) {
-		model.addAttribute("plane", new Airplane(0, null, null, null, 0));
+		model.addAttribute("plane", new Airplane(0, null, null, null, 0, 0, 0, 0));
 		return "add-plane";
 	}
 	

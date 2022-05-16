@@ -2,41 +2,53 @@ package com.gusco.springboot.web.wicova.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.gusco.springboot.web.wicova.model.Aflossing;
-import com.gusco.springboot.web.wicova.model.Simulation;
+import com.gusco.springboot.web.wicova.model.Airplane;
 import com.gusco.springboot.web.wicova.service.AflossingService;
-import com.gusco.springboot.web.wicova.service.SimulationService;
+import com.gusco.springboot.web.wicova.service.PlaneService;
 
 @Controller
+@SessionAttributes("name")
 public class AnnuityTableController {
 	
 	@Autowired
 	AflossingService service;
 	
 	@Autowired
-	SimulationService simService;
-
-	@RequestMapping(value = "/show-simulation", method = RequestMethod.GET)
-	public String showTable(ModelMap map, @RequestParam int id) {
+	PlaneService airplaneService;
+	
+	@RequestMapping(value = "/plane-annuity-dialog", method = RequestMethod.POST)
+	public String showTable(ModelMap map, @Valid @ModelAttribute("plane") Airplane plane, BindingResult result) {
+		if (result.hasErrors()) {
+			return "plane-annuity-dialog";
+		}
+		
 		service.flush();
 		
-		Simulation sim = simService.retrieveSim(id);
+		Airplane airplane = airplaneService.retrievePlane(plane.getId());
+		airplane.setJaarRente(plane.getJaarRente());
+		airplane.setLoopTijd(plane.getLoopTijd());
 		
-		double pmt = this.calculatePayment(sim.getKapitaal(), sim.getJaarRente(), sim.getLoopTijd());
-		sim.setPmt(service.round(pmt, 2));
-
-		map.put("sim", sim);
-		map.put("uName", sim.getUser());
+		double pmt = this.calculatePayment(airplane.getPrice(), airplane.getJaarRente(), airplane.getLoopTijd());
+		airplane.setPmt(service.round(pmt, 2));
 		
-		List<Aflossing> aflossingen = service.getAflossingen(sim);
+		map.put("plane", airplane);
+		
+		List<Aflossing> aflossingen = service.getAflossingen(airplane);
 		map.put("aflossingen", aflossingen);
+		
+		
 		
 		return "show-simulation";
 	}

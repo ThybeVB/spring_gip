@@ -8,7 +8,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.gusco.springboot.web.wicova.model.Aflossing;
-import com.gusco.springboot.web.wicova.model.Simulation;
+import com.gusco.springboot.web.wicova.model.Airplane;
 
 @Service
 public class AflossingService {
@@ -22,13 +22,13 @@ public class AflossingService {
 		rows.add(new Aflossing(++rowCount, payment, intrestPart, capitalPart, debtSaldo));
 	}
 	
-	public List<Aflossing> getAflossingen(Simulation sim) {
-		this.huidigSaldo = sim.getKapitaal();
-		for (int i = 0; i < sim.getLoopTijd(); i++) {
-			double intrestGedeelte = getInterestgedeelte(sim.getJaarRente());
-			double kapitaalGedeelte = getKapitaalDeel(sim.getPmt(), intrestGedeelte);
+	public List<Aflossing> getAflossingen(Airplane plane) {
+		this.huidigSaldo = plane.getPrice();
+		for (int i = 0; i < plane.getLoopTijd(); i++) {
+			double intrestGedeelte = getInterestgedeelte(plane.getJaarRente());
+			double kapitaalGedeelte = getKapitaalDeel(plane.getPmt(), intrestGedeelte);
 			double newSaldo = this.getNewSaldo(kapitaalGedeelte);
-			this.addRow(sim.getPmt(), intrestGedeelte, kapitaalGedeelte, newSaldo);
+			this.addRow(plane.getPmt(), intrestGedeelte, kapitaalGedeelte, newSaldo);
 		}
 		
 		return rows;

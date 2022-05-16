@@ -14,12 +14,12 @@ public class PlaneService {
 	private static int planeCount = 6;
 	
 	static {
-		planes.add(new Airplane(1, "A320", "Passagiersjet met twee motoren", "Airbus", 500000));
-		planes.add(new Airplane(2, "AN-225", "Grootste vliegtuig ooit bestaan", "Antonov", 5000000));
-		planes.add(new Airplane(3, "747-8", "Grootste passagiersjet met vier motoren", "Boeing", 2000000));
-		planes.add(new Airplane(4, "Citation", "Privéjet", "Cessna", 750000));
-		planes.add(new Airplane(5, "Typhoon", "NAVO Straaljager", "Eurofighter", 50000));
-		planes.add(new Airplane(6, "F-16 Fighting Falcon", "Meest verkochte aanval straaljager", "General Dynamics", 10000000));
+		planes.add(new Airplane(1, "A320", "Passagiersjet met twee motoren", "Airbus", 500000, 0, 0, 0));
+		planes.add(new Airplane(2, "AN-225", "Grootste vliegtuig ooit bestaan", "Antonov", 5000000, 0, 0, 0));
+		planes.add(new Airplane(3, "747-8", "Grootste passagiersjet met vier motoren", "Boeing", 2000000, 0, 0, 0));
+		planes.add(new Airplane(4, "Citation", "Privéjet", "Cessna", 750000, 0, 0, 0));
+		planes.add(new Airplane(5, "Typhoon", "NAVO Straaljager", "Eurofighter", 50000, 0, 0, 0));
+		planes.add(new Airplane(6, "F-16 Fighting Falcon", "Meest verkochte aanval straaljager", "General Dynamics", 10000000, 0, 0, 0));
 	}
 	
 	public List<Airplane> retrievePlanes() {
@@ -46,7 +46,7 @@ public class PlaneService {
 	}
 	
 	public void addPlane(String model, String description, String brand, double price) {
-		planes.add(new Airplane(++planeCount, model, description, brand, price));
+		planes.add(new Airplane(++planeCount, model, description, brand, price, 0, 0, 0));
 	}
 	
 	public void deletePlane(int id) {

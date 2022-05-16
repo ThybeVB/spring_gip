@@ -2,7 +2,7 @@
 <%@include file ="common/navigation.jspf" %>
 <div class="container">
 	
-	<h1>Aflossingstabel voor ${uName}!!</h1>
+	<h1>Aflossingstabel voor ${plane.brand} ${plane.name}</h1>
 	<table class="table table-striped caption-top">
 	<caption>Simulatie</caption>
 		<thead>
@@ -14,9 +14,9 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td><fmt:formatNumber value="${sim.kapitaal}" currencySymbol="&euro;" type="currency" maxFractionDigits="3" minIntegerDigits="2"/></td>
-				<td>${sim.loopTijd}</td>
-				<td>${sim.jaarRente}%</td>
+				<td><fmt:formatNumber value="${plane.price}" currencySymbol="&euro;" type="currency" maxFractionDigits="3" minIntegerDigits="2"/></td>
+				<td>${plane.loopTijd}</td>
+				<td>${plane.jaarRente}%</td>
 			</tr>
 		</tbody>
 	</table>
@@ -45,6 +45,6 @@
 		</tbody>
 	</table>
 	
-	<a href="/list-sims" class="btn btn-primary">Alle simulaties</a>
+	<a href="/list-planes" class="btn btn-primary">Terug naar vliegtuigen</a>
 </div>
 <%@include file ="common/footer.jspf" %>

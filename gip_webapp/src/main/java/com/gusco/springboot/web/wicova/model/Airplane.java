@@ -17,16 +17,46 @@ public class Airplane {
 	@Min(value=0, message="Vul een prijs in boven 0€.")
 	private double price;
 	
+	private int loopTijd;
+	private double jaarRente;
+	private double pmt;
+
+
 	public Airplane(int id, String name, String description, String brand,
-			@NotNull @Min(value = 0, message = "Vul een prijs in boven 0€.") double price) {
+			@NotNull @Min(value = 0, message = "Vul een prijs in boven 0€.") double price, int loopTijd,
+			double jaarRente, double pmt) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.brand = brand;
 		this.price = price;
+		this.loopTijd = loopTijd;
+		this.jaarRente = jaarRente;
+		this.pmt = pmt;
 	}
 
+	public double getPmt() {
+		return pmt;
+	}
+
+	public void setPmt(double pmt) {
+		this.pmt = pmt;
+	}
+
+	public int getLoopTijd() {
+		return loopTijd;
+	}
+
+	public void setLoopTijd(int loopTijd) {
+		this.loopTijd = loopTijd;
+	}
+	public double getJaarRente() {
+		return jaarRente;
+	}
+	public void setJaarRente(double jaarRente) {
+		this.jaarRente = jaarRente;
+	}
 	public int getId() {
 		return id;
 	}
