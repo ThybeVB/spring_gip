@@ -12,8 +12,8 @@
 	<groupId>com.gusco.springboot.web</groupId>
 	<artifactId>wicova-airplanes</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>annuiteit</name>
-	<description>annuiteit</description>
+	<name>AirplaneShop</name>
+	<description>AirplaneShop</description>
 	<properties>
 		<java.version>12</java.version>
 	</properties>

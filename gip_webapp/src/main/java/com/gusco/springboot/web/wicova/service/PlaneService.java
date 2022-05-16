@@ -18,7 +18,7 @@ public class PlaneService {
 		planes.add(new Airplane(2, "AN-225", "Grootste vliegtuig ooit bestaan", "Antonov", 5000000));
 		planes.add(new Airplane(3, "747-8", "Grootste passagiersjet met vier motoren", "Boeing", 2000000));
 		planes.add(new Airplane(4, "Citation", "Privéjet", "Cessna", 750000));
-		planes.add(new Airplane(5, "G650", "Luxueuse privéjet", "Gulfstream", 2000000));
+		planes.add(new Airplane(5, "Typhoon", "NAVO Straaljager", "Eurofighter", 50000));
 		planes.add(new Airplane(6, "F-16 Fighting Falcon", "Meest verkochte aanval straaljager", "General Dynamics", 10000000));
 	}
 	
@@ -42,8 +42,7 @@ public class PlaneService {
 	}
 	
 	public void updatePlane(Airplane plane) {
-		planes.remove(plane);
-		planes.add(plane);
+		planes.set(plane.getId() - 1, plane);
 	}
 	
 	public void addPlane(String model, String description, String brand, double price) {
