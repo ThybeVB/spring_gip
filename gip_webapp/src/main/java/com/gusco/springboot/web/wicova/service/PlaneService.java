@@ -14,12 +14,12 @@ public class PlaneService {
 	private static int planeCount = 6;
 	
 	static {
-		planes.add(new Airplane(1, "A320", "Passagiersjet met twee motoren", "Airbus", 500000, 0, 0, 0));
-		planes.add(new Airplane(2, "AN-225", "Grootste vliegtuig ooit bestaan", "Antonov", 5000000, 0, 0, 0));
-		planes.add(new Airplane(3, "747-8", "Grootste passagiersjet met vier motoren", "Boeing", 2000000, 0, 0, 0));
-		planes.add(new Airplane(4, "Citation", "Privéjet", "Cessna", 750000, 0, 0, 0));
-		planes.add(new Airplane(5, "Typhoon", "NAVO Straaljager", "Eurofighter", 50000, 0, 0, 0));
-		planes.add(new Airplane(6, "F-16 Fighting Falcon", "Meest verkochte aanval straaljager", "General Dynamics", 10000000, 0, 0, 0));
+		planes.add(new Airplane(1, "A320", "Passagiersjet met twee motoren", "Airbus", 101000000, 0, 0, 0));
+		planes.add(new Airplane(2, "AN-225", "Grootste vliegtuig ooit bestaan", "Antonov", 300000000, 0, 0, 0));
+		planes.add(new Airplane(3, "747-8", "Grootste passagiersjet met vier motoren", "Boeing", 350000000, 0, 0, 0));
+		planes.add(new Airplane(4, "Citation", "Privéjet", "Cessna", 27000000, 0, 0, 0));
+		planes.add(new Airplane(5, "Typhoon", "NAVO Straaljager", "Eurofighter", 124000000, 0, 0, 0));
+		planes.add(new Airplane(6, "F-16 Fighting Falcon", "Meest verkochte aanval straaljager", "General Dynamics", 35000000, 0, 0, 0));
 	}
 	
 	public List<Airplane> retrievePlanes() {
