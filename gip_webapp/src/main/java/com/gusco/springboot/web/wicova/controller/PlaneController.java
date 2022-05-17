@@ -13,31 +13,31 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.gusco.springboot.web.wicova.model.Airplane;
-import com.gusco.springboot.web.wicova.service.PlaneService;
+import com.gusco.springboot.web.wicova.service.interfaces.AirplaneInterface;
 
 @Controller
 @SessionAttributes("name")
 public class PlaneController {
 	
 	@Autowired
-	PlaneService service;
+	AirplaneInterface airplaneInterface;
 	
 	@RequestMapping(value = "/list-planes", method = RequestMethod.GET)
 	public String showPlanesPage(ModelMap model) {
-		model.put("planes", service.retrievePlanes());
+		model.put("planes", airplaneInterface.findAll());
 		return "list-planes";
 	}
 	
 	@RequestMapping(value="/plane-annuity-dialog", method = RequestMethod.GET)
 	public String showAnnuityDialog(ModelMap model, @RequestParam int id) {
-		Airplane plane = service.retrievePlane(id);
+		Airplane plane = airplaneInterface.getById(id);
 		model.put("plane", plane);
 		return "plane-annuity-dialog";
 	}
 	
 	@RequestMapping(value = "/add-plane", method = RequestMethod.GET)
 	public String showAddPlanePage(ModelMap model) {
-		model.addAttribute("plane", new Airplane(0, null, null, null, 0, 0, 0, 0));
+		model.addAttribute("plane", new Airplane(0, null, null, null, null, 0, 0, 0, 0));
 		return "add-plane";
 	}
 	
@@ -48,14 +48,14 @@ public class PlaneController {
 			return "add-plane";
 		}
 		
-		service.addPlane(plane.getName(), plane.getDescription(), plane.getBrand(), plane.getPrice());
+		airplaneInterface.save(plane);		
 		
 		return "redirect:/list-planes";
 	}
 	
 	@RequestMapping(value = "/update-plane", method = RequestMethod.GET)
 	public String showUpdatePlanePage(ModelMap model, @RequestParam int id) {
-		Airplane plane = service.retrievePlane(id);
+		Airplane plane = airplaneInterface.getById(id);
 		model.put("plane", plane);
 		return "update-plane";
 	}
@@ -66,13 +66,14 @@ public class PlaneController {
 			return "update-simulation";
 		}
 
-		service.updatePlane(plane);
+		airplaneInterface.save(plane);
 		
 		return "redirect:/list-planes";
 	}
 	@RequestMapping(value = "/delete-plane")
 	public String deletePlane(@RequestParam int id) {
-		service.deletePlane(id);
+		Airplane plane = airplaneInterface.getById(id);
+		airplaneInterface.delete(plane);
 		return "redirect:/list-planes";
 	}
 	

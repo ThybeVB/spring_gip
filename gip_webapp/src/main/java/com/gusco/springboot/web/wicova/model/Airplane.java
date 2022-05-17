@@ -2,16 +2,24 @@ package com.gusco.springboot.web.wicova.model;
 
 import java.util.Objects;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
+@Entity
 public class Airplane {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
 	private String name;
 	private String description;
 	private String brand;
+	private String pictureUrl;
 	
 	@NotNull
 	@Min(value=0, message="Vul een prijs in boven 0€.")
@@ -19,24 +27,35 @@ public class Airplane {
 	
 	private int loopTijd;
 	
-	
 	private double jaarRente;
 	
 	private double pmt;
 
+	public Airplane() {
+		super();
+	}
 
 	public Airplane(int id, String name, String description, String brand,
-			@NotNull @Min(value = 0, message = "Vul een prijs in boven 0€.") double price, int loopTijd,
+String pictureUrl, @NotNull @Min(value = 0, message = "Vul een prijs in boven 0€.") double price, int loopTijd,
 			double jaarRente, double pmt) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.brand = brand;
+		this.pictureUrl = pictureUrl;
 		this.price = price;
 		this.loopTijd = loopTijd;
 		this.jaarRente = jaarRente;
 		this.pmt = pmt;
+	}
+
+	public String getPictureUrl() {
+		return pictureUrl;
+	}
+
+	public void setPictureUrl(String pictureUrl) {
+		this.pictureUrl = pictureUrl;
 	}
 
 	public double getPmt() {
@@ -54,12 +73,15 @@ public class Airplane {
 	public void setLoopTijd(int loopTijd) {
 		this.loopTijd = loopTijd;
 	}
+	
 	public double getJaarRente() {
 		return jaarRente;
 	}
+	
 	public void setJaarRente(double jaarRente) {
 		this.jaarRente = jaarRente;
 	}
+	
 	public int getId() {
 		return id;
 	}

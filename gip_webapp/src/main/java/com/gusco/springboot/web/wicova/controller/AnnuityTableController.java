@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import com.gusco.springboot.web.wicova.model.Aflossing;
 import com.gusco.springboot.web.wicova.model.Airplane;
 import com.gusco.springboot.web.wicova.service.AflossingService;
-import com.gusco.springboot.web.wicova.service.PlaneService;
+import com.gusco.springboot.web.wicova.service.interfaces.AirplaneInterface;
 
 @Controller
 @SessionAttributes("name")
@@ -26,7 +26,7 @@ public class AnnuityTableController {
 	AflossingService service;
 	
 	@Autowired
-	PlaneService airplaneService;
+	AirplaneInterface airplaneInterface;
 	
 	@RequestMapping(value = "/plane-annuity-dialog", method = RequestMethod.POST)
 	public String showTable(ModelMap map, @Valid @ModelAttribute("plane") Airplane plane, BindingResult result) {
@@ -36,7 +36,7 @@ public class AnnuityTableController {
 		
 		service.flush();
 		
-		Airplane airplane = airplaneService.retrievePlane(plane.getId());
+		Airplane airplane = airplaneInterface.getById(plane.getId());
 		airplane.setJaarRente(plane.getJaarRente());
 		airplane.setLoopTijd(plane.getLoopTijd());
 		
