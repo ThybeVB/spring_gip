@@ -29,7 +29,7 @@
 			<form:hidden path="id" />
 			<form:label path="jaarRente">Jaarrente</form:label>
 			<form:input path="jaarRente" name="jaarRente" type="number" required="required"
-				class="form-control" />
+				class="form-control" step="0.001" />
 			<form:errors path="jaarRente" cssClass="text-warning"></form:errors>
 		</fieldset>
 
