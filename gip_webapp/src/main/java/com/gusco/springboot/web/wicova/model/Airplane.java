@@ -18,7 +18,10 @@ public class Airplane {
 	private double price;
 	
 	private int loopTijd;
+	
+	
 	private double jaarRente;
+	
 	private double pmt;
 
 

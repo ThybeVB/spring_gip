@@ -25,11 +25,16 @@
 			<form:errors path="description" cssClass="text-warning"></form:errors>
 		</fieldset>
 		<fieldset class="form-group">
+			<form:hidden path="id" />
 			<form:label path="price">Prijs:</form:label>
 			<form:input path="price" id="price" class="form-control"
 				required="required" type="number"></form:input>
 			<form:errors path="price" cssClass="text-warning"></form:errors>
+			<form:hidden path="pmt" />
+			<form:hidden path="loopTijd" />
+			<form:hidden path="jaarRente" />
 		</fieldset>
+		
 
 		<button class="btn btn-success mt-3" type="submit">Update</button>
 	</form:form>

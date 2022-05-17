@@ -44,7 +44,8 @@ public class PlaneController {
 	@RequestMapping(value = "/add-plane", method = RequestMethod.POST)
 	public String addPlane(ModelMap model, @Valid @ModelAttribute("plane") Airplane plane, BindingResult result) {
 		if (result.hasErrors()) {
-			return "update-plane";
+			System.out.println(result.toString());
+			return "add-plane";
 		}
 		
 		service.addPlane(plane.getName(), plane.getDescription(), plane.getBrand(), plane.getPrice());

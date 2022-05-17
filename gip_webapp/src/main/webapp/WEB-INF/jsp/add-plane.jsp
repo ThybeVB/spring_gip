@@ -29,6 +29,9 @@
 			<form:input path="price" id="price" class="form-control"
 				required="required" type="number"></form:input>
 			<form:errors path="price" cssClass="text-warning"></form:errors>
+			<form:hidden path="pmt" />
+			<form:hidden path="loopTijd" />
+			<form:hidden path="jaarRente" />
 		</fieldset>
 
 		<button class="btn btn-success mt-3" type="submit">Voeg toe</button>
