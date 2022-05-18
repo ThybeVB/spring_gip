@@ -1,5 +1,6 @@
-.welcomepagebg {
+.welcomebg {
     background: url('../../../images/welcome_1.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
+    overflow: hidden;
 }
