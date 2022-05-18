@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.gusco.springboot.web</groupId>
 	<artifactId>wicova-airplanes</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>AirplaneShop</name>
 	<description>AirplaneShop</description>
 	<properties>

@@ -4,3 +4,8 @@
     height: 100vh;
     overflow: hidden;
 }
+
+.navbar-brand img {
+	height: 10vh;
+	width: auto;
+}

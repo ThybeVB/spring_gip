@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-md-3">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="/welcome">WicovaAirplanes</a>
+		<a class="navbar-brand" href="/welcome">
+			<img src="../../../images/wicova_airplanes_logo.png" alt=""/>
+        </a>
 
 		<button type="button" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" aria-controls="navbarNav" aria-expanded="false" aria-lable="Toggle Navbar">
 			<span class="navbar-toggler-icon"></span>
