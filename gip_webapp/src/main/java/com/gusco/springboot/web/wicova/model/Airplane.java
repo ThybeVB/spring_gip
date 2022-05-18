@@ -6,8 +6,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+
+import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 public class Airplane {
@@ -19,6 +22,9 @@ public class Airplane {
 	private String name;
 	private String description;
 	private String brand;
+	
+	@Transient
+	private MultipartFile picture;
 	
 	private String pictureUrl;
 	
@@ -36,27 +42,36 @@ public class Airplane {
 		super();
 	}
 
-	public Airplane(int id, String name, String description, String brand,
-String pictureUrl, @NotNull @Min(value = 0, message = "Vul een prijs in boven 0€.") double price, int loopTijd,
+	public Airplane(int id, String name, String description, String brand, MultipartFile picture, String pictureUrl,
+			@NotNull @Min(value = 0, message = "Vul een prijs in boven 0€.") double price, int loopTijd,
 			double jaarRente, double pmt) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.brand = brand;
+		this.picture = picture;
 		this.pictureUrl = pictureUrl;
 		this.price = price;
 		this.loopTijd = loopTijd;
 		this.jaarRente = jaarRente;
 		this.pmt = pmt;
 	}
-
+	
 	public String getPictureUrl() {
 		return pictureUrl;
 	}
 
 	public void setPictureUrl(String pictureUrl) {
 		this.pictureUrl = pictureUrl;
+	}
+
+	public MultipartFile getPicture() {
+		return picture;
+	}
+
+	public void setPicture(MultipartFile picture) {
+		this.picture = picture;
 	}
 
 	public double getPmt() {

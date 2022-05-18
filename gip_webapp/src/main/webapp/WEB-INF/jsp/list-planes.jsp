@@ -6,7 +6,7 @@
     <c:forEach items="${planes}" var="plane">
       <div class="col-xs-12 col-lg-4 pb-4 d-flex align-items-stretch">
         <div class="card">
-          <img class="card-img-top" src="./img/students/portrait_kobe.png" alt=""/>
+          <img class="card-img-top" src="../../../plane-photos/${plane.id}/${plane.pictureUrl}" alt=""/>
           <div class="card-body">
             <h4 class="card-title mb-0">${plane.brand} ${plane.name}</h4>
             <h6 class="card-subtitle text-muted py-2">
@@ -20,8 +20,8 @@
             <c:if test="${name != null}">
               <a href="/update-plane?id=${plane.id}" class="btn btn-warning">Bewerk dit vliegtuig</a>
               <a href="/delete-plane?id=${plane.id}" class="btn btn-danger">Verwijder dit vliegtuig</a>
-              <a href="/plane-annuity-dialog?id=${plane.id}" class="btn btn-success">Aflossingstabel</a>
             </c:if>
+            <a href="/plane-annuity-dialog?id=${plane.id}" class="btn btn-success mt-2">Aflossingstabel</a>
           </div>
         </div>
       </div>

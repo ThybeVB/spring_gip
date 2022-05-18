@@ -25,10 +25,10 @@
 			<form:errors path="description" cssClass="text-warning"></form:errors>
 		</fieldset>
 		<fieldset class="form-group">
-			<form:label path="pictureUrl">Foto:</form:label>
-			<form:input path="pictureUrl" id="pictureUrl" class="form-control"
-				required="required" type="file" accept="image/png, image/jpeg" />
-			<form:errors path="pictureUrl" cssClass="text-warning"></form:errors>
+			<form:label path="picture">Afbeelding:</form:label>
+			<form:input path="picture" id="picture" class="form-control"
+				required="required" type="file" accept="image/png, image/jpeg"></form:input>
+			<form:errors path="picture" cssClass="text-warning"></form:errors>
 		</fieldset>
 		<fieldset class="form-group">
 			<form:label path="price">Prijs:</form:label>
@@ -38,8 +38,9 @@
 			<form:hidden path="pmt" />
 			<form:hidden path="loopTijd" />
 			<form:hidden path="jaarRente" />
+			<form:hidden path="pictureUrl" />
 		</fieldset>
-
+			
 		<button class="btn btn-success mt-3" type="submit">Voeg toe</button>
 	</form:form>
 </div>

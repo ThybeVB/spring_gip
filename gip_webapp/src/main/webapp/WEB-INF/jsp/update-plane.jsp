@@ -4,7 +4,7 @@
 
 	<h1>Pas een vliegtuig aan:</h1>
 
-	<form:form method="POST" modelAttribute="plane">
+	<form:form method="POST" enctype="multipart/form-data" modelAttribute="plane">
 		<fieldset class="form-group">
 			<form:hidden path="id" />
 			<form:label path="brand">Merk:</form:label>
@@ -25,7 +25,12 @@
 			<form:errors path="description" cssClass="text-warning"></form:errors>
 		</fieldset>
 		<fieldset class="form-group">
-			<form:hidden path="id" />
+			<form:label path="picture">Afbeelding:</form:label>
+			<form:input path="picture" id="picture" class="form-control"
+				required="required" type="file" accept="image/png, image/jpeg"></form:input>
+			<form:errors path="picture" cssClass="text-warning"></form:errors>
+		</fieldset>
+		<fieldset class="form-group">
 			<form:label path="price">Prijs:</form:label>
 			<form:input path="price" id="price" class="form-control"
 				required="required" type="number"></form:input>
@@ -33,8 +38,8 @@
 			<form:hidden path="pmt" />
 			<form:hidden path="loopTijd" />
 			<form:hidden path="jaarRente" />
+			<form:hidden path="pictureUrl" />
 		</fieldset>
-		
 
 		<button class="btn btn-success mt-3" type="submit">Update</button>
 	</form:form>
