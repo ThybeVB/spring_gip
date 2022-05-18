@@ -4,7 +4,7 @@
 
 	<h1>Voeg een vliegtuig toe:</h1>
 
-	<form:form method="POST" modelAttribute="plane">
+	<form:form method="POST" enctype="multipart/form-data" modelAttribute="plane">
 		<fieldset class="form-group">
 			<form:hidden path="id" />
 			<form:label path="brand">Merk:</form:label>
@@ -23,6 +23,12 @@
 			<form:input path="description" id="description" class="form-control"
 				required="required" type="text"></form:input>
 			<form:errors path="description" cssClass="text-warning"></form:errors>
+		</fieldset>
+		<fieldset class="form-group">
+			<form:label path="pictureUrl">Foto:</form:label>
+			<form:input path="pictureUrl" id="pictureUrl" class="form-control"
+				required="required" type="file" accept="image/png, image/jpeg" />
+			<form:errors path="pictureUrl" cssClass="text-warning"></form:errors>
 		</fieldset>
 		<fieldset class="form-group">
 			<form:label path="price">Prijs:</form:label>

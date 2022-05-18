@@ -19,6 +19,7 @@ public class Airplane {
 	private String name;
 	private String description;
 	private String brand;
+	
 	private String pictureUrl;
 	
 	@NotNull
