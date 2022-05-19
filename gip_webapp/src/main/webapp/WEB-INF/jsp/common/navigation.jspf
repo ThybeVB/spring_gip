@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark bg-secondary navbar-expand-lg p-md-3">
+<nav class="navbar navbar-dark navbar-color navbar-expand-lg p-md-3">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="/welcome">
 			<img src="../../../images/wicova_airplanes_navlogo.png" alt=""/>

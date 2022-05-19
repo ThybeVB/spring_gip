@@ -8,7 +8,7 @@
 				<p class="text-white">Welkom ${name}!</p>
 			</c:if>
 			<br>
-			<a href="/list-planes" class="btn btn-primary rounded-pill px-3">Shop</a>
+			<a href="/list-planes" class="btn btn-outline-light rounded-pill px-3">Shop</a>
 	</div>
 </div>
 <%@include file="common/footer.jspf"%>
