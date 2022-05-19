@@ -1,5 +1,6 @@
 <%@include file ="common/header.jspf" %>
 <%@include file ="common/navigation.jspf" %>
+<div class="welcomebg">
 <div class="container">
   <h1 class="my-3">Onze vliegtuigen</h1>
   <div class="row">
@@ -30,5 +31,6 @@
   <c:if test="${name != null}">
     <a href="/add-plane" class="btn btn-primary my-5">Voeg een vliegtuig toe</a>
   </c:if>
+</div>
 </div>
 <%@include file ="common/footer.jspf" %>

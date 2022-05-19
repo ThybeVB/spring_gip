@@ -45,6 +45,6 @@
 		</tbody>
 	</table>
 	
-	<a href="/list-planes" class="btn btn-primary">Terug naar vliegtuigen</a>
+	<a href="/list-planes" class="btn btn-outline-dark">Terug naar vliegtuigen</a>
 </div>
 <%@include file ="common/footer.jspf" %>

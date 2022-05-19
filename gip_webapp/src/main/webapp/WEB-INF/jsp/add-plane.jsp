@@ -1,5 +1,6 @@
 <%@include file ="common/header.jspf" %>
 <%@include file ="common/navigation.jspf" %>
+<div class="welcomebg">
 <div class="container">
 
 	<h1>Voeg een vliegtuig toe:</h1>
@@ -41,7 +42,8 @@
 			<form:hidden path="pictureUrl" />
 		</fieldset>
 			
-		<button class="btn btn-success mt-3" type="submit">Voeg toe</button>
+		<button class="btn btn-outline-light mt-3" type="submit">Voeg toe</button>
 	</form:form>
+</div>
 </div>
 <%@include file ="common/footer.jspf" %>
