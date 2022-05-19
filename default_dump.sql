@@ -43,7 +43,7 @@ CREATE TABLE `airplane` (
 
 LOCK TABLES `airplane` WRITE;
 /*!40000 ALTER TABLE `airplane` DISABLE KEYS */;
-INSERT INTO `airplane` VALUES (1,'Boeing','Grootste passagiersjet met vier motoren',0,0,'747-8',0,350000000,'B-747_Iberia.jpg',NULL),(2,'Airbus','Passagiersjet met twee motoren',0,0,'A320',0,101000000,'Airbus_A320-214,_Brussels_Airlines_AN2114057.jpg',NULL),(3,'Antonov','Grootste vliegtuig ooit bestaan',0,0,'An-225',0,300000000,'an225.jpg',NULL),(4,'Cessna','Privéjet',0,0,'Citation',0,27000000,'citationx.jpg',NULL),(5,'Eurofighter','NAVO Straaljager',0,0,'Typhoon',0,124000000,'German_eurofighter.jpg',NULL),(6,'General Dynamics','Meest verkochte aanval straaljager',0,0,'F-16 Fighting Falcon',0,35000000,'Belgian-Air-Force-F-16-Vador-3-1024x682.jpg',NULL);
+INSERT INTO `airplane` VALUES (1,'Boeing','Grootste passagiersjet met vier motoren',0,0,'747-8',0,350000000,'B-747_Iberia.jpg',NULL),(2,'Airbus','Passagiersjet met twee motoren',0,0,'A320',0,101000000,'Airbus_A320-214,_Brussels_Airlines_AN2114057.jpg',NULL),(3,'Antonov','Grootste vliegtuig ooit bestaan',0,0,'An-225 Mriya',0,300000000,'an225.jpg',NULL),(4,'Cessna','Privéjet',0,0,'Citation',0,27000000,'citationx.jpg',NULL),(5,'Eurofighter','NAVO Straaljager',0,0,'Typhoon',0,124000000,'German_eurofighter.jpg',NULL),(6,'General Dynamics','Meest verkochte aanval straaljager',0,0,'F-16 Fighting Falcon',0,35000000,'Belgian-Air-Force-F-16-Vador-3-1024x682.jpg',NULL);
 /*!40000 ALTER TABLE `airplane` ENABLE KEYS */;
 UNLOCK TABLES;
 
