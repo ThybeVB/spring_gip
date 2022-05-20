@@ -84,6 +84,7 @@ public class PlaneController {
 	        FileUploadUtil.saveFile(uploadDir, fileName, plane.getPicture());
 		}
 		
+		airplaneInterface.save(plane);
 		
 		return "redirect:/list-planes";
 	}
