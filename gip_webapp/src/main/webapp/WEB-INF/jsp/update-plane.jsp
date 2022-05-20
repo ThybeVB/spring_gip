@@ -25,8 +25,7 @@
 		</fieldset>
 		<fieldset class="form-group">
 			<form:label path="description">Beschrijving:</form:label>
-			<form:input path="description" id="description" class="form-control"
-				required="required" type="text"></form:input>
+			<form:textarea class="form-control" path="description" id="description" type="text" required="required" rows="3"></form:textarea>
 			<form:errors path="description" cssClass="text-warning"></form:errors>
 		</fieldset>
 		<fieldset class="form-group">

@@ -1,10 +1,11 @@
 <%@include file ="common/header.jspf" %>
+
+<div class="shopbg">
 <%@include file ="common/navigation.jspf" %>
-<div class="welcomebg">
 <div class="container">
 	
 <div class="d-flex justify-content-center align-items-center">
-<div class="card mt-5 rounded col-12">
+<div class="card my-5 rounded col-12">
 	<div class= card-body>
 	<h4 class="card-title">Aflossingstabel voor ${plane.brand} ${plane.name}</h4>	
 

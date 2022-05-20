@@ -31,7 +31,7 @@
     </c:forEach>
   </div>
   <c:if test="${name != null}">
-    <a href="/add-plane" class="btn btn-primary my-5">Voeg een vliegtuig toe</a>
+    <a href="/add-plane" class="btn btn-outline-light mb-5">Voeg een vliegtuig toe</a>
   </c:if>
 </div>
 </div>

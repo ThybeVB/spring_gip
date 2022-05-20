@@ -1,8 +1,9 @@
 <%@include file="common/header.jspf"%>
 <%@include file="common/navigation.jspf"%>
 <div class="welcomebg d-flex justify-content-center align-items-center">
+
 	<div class="content text-center">
-			<img src="../../../images/wicova_airplanes_logo.png" alt="Logo">
+			<img src="../../../images/wicova_airplanes_logo.png" alt="Logo" class="img-fluid">
 			<br>
 			<c:if test="${name != null}">
 				<p class="text-white">Welkom ${name}!</p>
