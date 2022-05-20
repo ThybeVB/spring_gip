@@ -5,7 +5,7 @@
 <div class="container">
 	
 <div class="d-flex justify-content-center align-items-center">
-<div class="card my-5 rounded col-12">
+<div class="card my-5 rounded col-lg-12 table-responsive">
 	<div class= card-body>
 	<h4 class="card-title">Aflossingstabel voor ${plane.brand} ${plane.name}</h4>	
 
@@ -13,9 +13,9 @@
 	<caption>Simulatie</caption>
 		<thead>
 			<tr>
-				<th>Kapitaal</th>
-				<th>Looptijd in maanden</th>
-				<th>Jaarrente</th>
+				<th scope="col">Kapitaal</th>
+				<th scope="col">Looptijd in maanden</th>
+				<th scope="col">Jaarrente</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -51,7 +51,7 @@
 		</tbody>
 	</table>
 	
-	<a href="/list-planes" class="btn btn-outline-dark">Terug naar vliegtuigen</a>
+	<a href="/list-planes" class="btn btn-outline-dark">Terug naar de winkel</a>
 </div>
 </div>
 </div>
