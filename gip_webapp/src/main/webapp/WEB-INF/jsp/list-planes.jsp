@@ -1,6 +1,7 @@
 <%@include file ="common/header.jspf" %>
+
+<div class="shopbg">
 <%@include file ="common/navigation.jspf" %>
-<div class="welcomebg">
 <div class="container">
   <h1 class="my-3">Onze vliegtuigen</h1>
   <div class="row">

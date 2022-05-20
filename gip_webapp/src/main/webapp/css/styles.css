@@ -1,8 +1,18 @@
 .welcomebg {
-    background: url('../../../images/welcome_1.jpg') no-repeat center center fixed;
+    background: url('../../../images/welcome_1.jpg') center;
     background-size: cover;
-    height: 100vh;
-    overflow: hidden;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.shopbg {
+	background: url('../../../images/welcome_1.jpg') center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .navbar-brand img {
