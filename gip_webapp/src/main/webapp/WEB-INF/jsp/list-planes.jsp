@@ -6,15 +6,15 @@
   <h1 class="my-3">Onze vliegtuigen</h1>
   <div class="row">
     <c:forEach items="${planes}" var="plane">
-      <div class="col-xs-12 col-lg-4 pb-4 d-flex align-items-stretch">
+      <c:if test="">
+      </c:if>
+      <div class="col-12 col-lg-4 pb-4 d-flex align-items-stretch">
         <div class="card">
           <img class="card-img-top" src="../../../plane-photos/${plane.id}/${plane.pictureUrl}" alt=""/>
           <div class="card-body">
             <h4 class="card-title mb-0">${plane.brand} ${plane.name}</h4>
             <h6 class="card-subtitle text-muted py-2">
-              <div class="d-none d-lg-block">
-                <fmt:formatNumber value="${plane.price}" currencySymbol="&euro; " type="currency" maxFractionDigits="2" minIntegerDigits="2"/>
-              </div>
+            	<fmt:formatNumber value="${plane.price}" currencySymbol="&euro; " type="currency" maxFractionDigits="2" minIntegerDigits="2"/>
             </h6>
             <p class="card-text">
               ${plane.description}
