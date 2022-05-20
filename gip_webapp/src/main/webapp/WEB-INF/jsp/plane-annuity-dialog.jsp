@@ -1,5 +1,6 @@
 <%@include file ="common/header.jspf" %>
 <%@include file ="common/navigation.jspf" %>
+<div class="welcomebg">
 <div class="container">
 
 	<h1>Een aflossingstabel opvragen voor de ${plane.brand} ${plane.name}</h1>
@@ -35,5 +36,6 @@
 
 		<button class="btn btn-success mt-3" type="submit">Vraag op</button>
 	</form:form>
+</div>
 </div>
 <%@include file ="common/footer.jspf" %>

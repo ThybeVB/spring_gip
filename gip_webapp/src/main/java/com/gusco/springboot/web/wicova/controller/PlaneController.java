@@ -75,12 +75,15 @@ public class PlaneController {
 			return "update-plane";
 		}
 		
-		String fileName = StringUtils.cleanPath(plane.getPicture().getOriginalFilename());
-		plane.setPictureUrl(fileName);		
-		Airplane savedPlane = airplaneInterface.save(plane);
+		if (!plane.getPicture().isEmpty() && plane.getPicture() != null) {
+			String fileName = StringUtils.cleanPath(plane.getPicture().getOriginalFilename());
+			plane.setPictureUrl(fileName);		
+			Airplane savedPlane = airplaneInterface.save(plane);
+			
+			String uploadDir = "src/main/webapp/plane-photos/" + savedPlane.getId();
+	        FileUploadUtil.saveFile(uploadDir, fileName, plane.getPicture());
+		}
 		
-		String uploadDir = "src/main/webapp/plane-photos/" + savedPlane.getId();
-        FileUploadUtil.saveFile(uploadDir, fileName, plane.getPicture());
 		
 		return "redirect:/list-planes";
 	}

@@ -1,5 +1,6 @@
 <%@include file ="common/header.jspf" %>
 <%@include file ="common/navigation.jspf" %>
+<div class="welcomebg">
 <div class="container">
 
 	<h1>Pas een vliegtuig aan:</h1>
@@ -27,7 +28,7 @@
 		<fieldset class="form-group">
 			<form:label path="picture">Afbeelding:</form:label>
 			<form:input path="picture" id="picture" class="form-control"
-				required="required" type="file" accept="image/png, image/jpeg"></form:input>
+ type="file" accept="image/png, image/jpeg" value="../../../plane-photos/${plane.id}/${plane.pictureUrl}"></form:input>
 			<form:errors path="picture" cssClass="text-warning"></form:errors>
 		</fieldset>
 		<fieldset class="form-group">
@@ -41,7 +42,8 @@
 			<form:hidden path="pictureUrl" />
 		</fieldset>
 
-		<button class="btn btn-success mt-3" type="submit">Update</button>
+		<button class="btn btn-outline-light mt-3" type="submit">Update</button>
 	</form:form>
+</div>
 </div>
 <%@include file ="common/footer.jspf" %>

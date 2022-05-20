@@ -1,5 +1,6 @@
 <%@include file="common/header.jspf"%>
 <%@include file="common/navigation.jspf"%>
+<div class="welcomebg">
 <div class="container">
 	<form:form method="POST" modelAttribute="user">
 		<fieldset class="form-group">
@@ -15,8 +16,9 @@
 				required="required" type="password"></form:input>
 			<form:errors path="password" cssClass="text-warning"></form:errors>
 		</fieldset>
-		<button class="btn btn-success mt-3" type="submit">Login</button>
+		<button class="btn btn-outline-light mt-3" type="submit">Login</button>
 	</form:form>
+</div>
 </div>
 
 <%@include file="common/footer.jspf"%>
