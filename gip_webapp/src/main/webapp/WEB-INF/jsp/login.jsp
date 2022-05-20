@@ -4,9 +4,9 @@
 <div class="container">
 <div class="d-flex justify-content-center align-items-center">
 
-	<div class="card text-center col-3 mt-5">
+	<div class="card text-center mt-5 rounded col-md-5">
 	<div class= card-body>
-	<h5 class="card-title">Login</h5>
+	<h4 class="card-title">Login</h4>
 	<form:form method="POST" modelAttribute="user">
 		<fieldset class="form-group">
 			<form:hidden path="id" />

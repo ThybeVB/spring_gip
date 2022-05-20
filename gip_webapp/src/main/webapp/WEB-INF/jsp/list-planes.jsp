@@ -20,10 +20,11 @@
               ${plane.description}
             </p>
             <c:if test="${name != null}">
-              <a href="/update-plane?id=${plane.id}" class="btn btn-warning">Bewerk dit vliegtuig</a>
-              <a href="/delete-plane?id=${plane.id}" class="btn btn-danger">Verwijder dit vliegtuig</a>
+              <a href="/update-plane?id=${plane.id}" class="btn btn-outline-dark btn-sm">Bewerk dit vliegtuig</a>
+              <a href="/delete-plane?id=${plane.id}" class="btn btn-outline-dark btn-sm">Verwijder dit vliegtuig</a>
+              <br>
             </c:if>
-            <a href="/plane-annuity-dialog?id=${plane.id}" class="btn btn-success mt-2">Aflossingstabel</a>
+            <a href="/plane-annuity-dialog?id=${plane.id}" class="btn btn-outline-dark mt-2">Aflossingstabel</a>
           </div>
         </div>
       </div>

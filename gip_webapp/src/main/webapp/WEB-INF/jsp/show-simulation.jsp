@@ -1,8 +1,13 @@
 <%@include file ="common/header.jspf" %>
 <%@include file ="common/navigation.jspf" %>
+<div class="welcomebg">
 <div class="container">
 	
-	<h1>Aflossingstabel voor ${plane.brand} ${plane.name}</h1>
+<div class="d-flex justify-content-center align-items-center">
+<div class="card mt-5 rounded col-12">
+	<div class= card-body>
+	<h4 class="card-title">Aflossingstabel voor ${plane.brand} ${plane.name}</h4>	
+
 	<table class="table table-striped caption-top">
 	<caption>Simulatie</caption>
 		<thead>
@@ -46,5 +51,8 @@
 	</table>
 	
 	<a href="/list-planes" class="btn btn-outline-dark">Terug naar vliegtuigen</a>
+</div>
+</div>
+</div>
 </div>
 <%@include file ="common/footer.jspf" %>

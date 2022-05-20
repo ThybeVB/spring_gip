@@ -3,7 +3,10 @@
 <div class="welcomebg">
 <div class="container">
 
-	<h1>Voeg een vliegtuig toe:</h1>
+<div class="d-flex justify-content-center align-items-center">
+<div class="card mt-5 rounded col-md-5">
+	<div class= card-body>
+	<h4 class="card-title">Voeg een vliegtuig toe:</h4>
 
 	<form:form method="POST" enctype="multipart/form-data" modelAttribute="plane">
 		<fieldset class="form-group">
@@ -42,8 +45,11 @@
 			<form:hidden path="pictureUrl" />
 		</fieldset>
 			
-		<button class="btn btn-outline-light mt-3" type="submit">Voeg toe</button>
+		<button class="btn btn-outline-dark mt-3" type="submit">Voeg toe</button>
 	</form:form>
+	</div>
+	</div>
+	</div>
 </div>
 </div>
 <%@include file ="common/footer.jspf" %>

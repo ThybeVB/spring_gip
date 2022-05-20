@@ -3,7 +3,10 @@
 <div class="welcomebg">
 <div class="container">
 
-	<h1>Een aflossingstabel opvragen voor de ${plane.brand} ${plane.name}</h1>
+<div class="d-flex justify-content-center align-items-center">
+<div class="card mt-5 rounded col-md-5">
+	<div class= card-body>
+	<h4 class="card-title">Een aflossingstabel opvragen voor de ${plane.brand} ${plane.name}</h4>
 
 	<form:form method="POST" modelAttribute="plane">
 		<fieldset class="form-group">
@@ -34,8 +37,11 @@
 			<form:errors path="jaarRente" cssClass="text-warning"></form:errors>
 		</fieldset>
 
-		<button class="btn btn-success mt-3" type="submit">Vraag op</button>
+		<button class="btn btn-outline-dark mt-3" type="submit">Vraag op</button>
 	</form:form>
+	</div>
+	</div>
+	</div>
 </div>
 </div>
 <%@include file ="common/footer.jspf" %>
