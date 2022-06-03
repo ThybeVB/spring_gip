@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import com.gusco.springboot.web.wicova.model.User;
 import com.gusco.springboot.web.wicova.service.interfaces.UserInterface;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 @Controller
 @SessionAttributes("name")
@@ -29,7 +31,7 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value="/login", method=RequestMethod.POST)
-	public String showWelcomePage(ModelMap model, @Valid @ModelAttribute("user") User user, BindingResult result) {
+	public String showWelcomePage(ModelMap model, @Valid @ModelAttribute("user") User user, BindingResult result) throws NoSuchAlgorithmException {
 		if (result.hasErrors()) {
 			return "login";
 		}
@@ -39,8 +41,13 @@ public class LoginController {
 			return "login";
 		}
 		
+		String rawPass = user.getPassword();
+		MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
+		messageDigest.update(rawPass.getBytes());
+		String hash = new String(messageDigest.digest());
+		
 		model.put("name", user.getName());
-		model.put("password", user.getPassword());
+		model.put("password", hash);
 		
 		return "redirect:/welcome";
 	}

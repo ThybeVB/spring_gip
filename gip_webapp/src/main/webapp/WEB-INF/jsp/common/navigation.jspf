@@ -11,6 +11,7 @@
 			<ul class="navbar-nav me-auto">
 				<li class="nav-item"><a class="nav-link" href="/welcome">Home</a></li>
 				<li class="nav-item"><a class="nav-link" href="/list-planes">Shop</a></li>
+				<li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
 			</ul>
 			<c:if test="${name != null}">
 				<ul class="navbar-nav">
