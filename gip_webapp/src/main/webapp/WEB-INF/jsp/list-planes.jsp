@@ -20,8 +20,8 @@
               ${plane.description}
             </p>
             <c:if test="${name != null}">
-              <a href="/update-plane?id=${plane.id}" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
-              <a href="/delete-plane?id=${plane.id}" class="btn btn-outline-dark btn-sm"><i class="fa-solid fa-circle-trash"></i></a>
+              <a href="/update-plane?id=${plane.id}" class="btn btn-sm btn-social btn-outline-dark text-dark"><i class="fa fa-pen-to-square"></i></a>
+              <a href="/delete-plane?id=${plane.id}" class="btn btn-outline-dark btn-sm"><i class="fa fa-circle-trash"></i></a>
               <br>
             </c:if>
             <a href="/plane-annuity-dialog?id=${plane.id}" class="btn btn-outline-dark mt-2">Aflossingstabel</a>
@@ -31,7 +31,7 @@
     </c:forEach>
   </div>
   <c:if test="${name != null}">
-    <a href="/add-plane" class="btn btn-primary mb-5"><i class="fa-solid fa-plus"></i></a>
+    <a href="/add-plane" class="btn btn-outline-light p-3 mb-5 rounded-circle"><i class="fa fa-plus"></i></a>
   </c:if>
 </div>
 </div>
