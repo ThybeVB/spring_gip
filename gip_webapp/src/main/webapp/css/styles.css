@@ -15,6 +15,15 @@
     background-attachment: fixed;
 }
 
+.contactbg {
+    background: url('../../../images/welcome_1.jpg') center;
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 .navbar-brand img {
 	height: 4vh;
 	width: auto;

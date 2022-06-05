@@ -20,8 +20,8 @@
               ${plane.description}
             </p>
             <c:if test="${name != null}">
-              <a href="/update-plane?id=${plane.id}" class="btn btn-sm btn-social btn-outline-dark text-dark"><i class="fa fa-pen-to-square"></i></a>
-              <a href="/delete-plane?id=${plane.id}" class="btn btn-outline-dark btn-sm"><i class="fa fa-circle-trash"></i></a>
+              <a href="/update-plane?id=${plane.id}" class="btn btn-outline-dark btn-sm p-2"><i class="fa fa-pen"></i></a>
+              <a href="/delete-plane?id=${plane.id}" class="btn btn-outline-dark btn-sm p-2"><i class="fa fa-trash-alt"></i></a>
               <br>
             </c:if>
             <a href="/plane-annuity-dialog?id=${plane.id}" class="btn btn-outline-dark mt-2">Aflossingstabel</a>
