@@ -36,18 +36,25 @@ public class LoginController {
 			return "login";
 		}
 		
-		boolean isValidUser = this.validateUser(user);
-		if (!isValidUser) {
-			return "login";
-		}
-		
 		String rawPass = user.getPassword();
-		MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
-		messageDigest.update(rawPass.getBytes());
-		String hash = new String(messageDigest.digest());
+		MessageDigest md = MessageDigest.getInstance("SHA-256");
+	    md.update(rawPass.getBytes());
+	    byte[] digest = md.digest();      
+	    StringBuffer hexString = new StringBuffer();
+	    
+	    for (int i = 0; i < digest.length; i++) {
+	         hexString.append(Integer.toHexString(0xFF & digest[i]));
+	    }
+	    
+	    user.setPassword(hexString.toString());
+	    
+	    boolean isValidUser = this.validateUser(user);
+	    if (!isValidUser) {
+	    	return "login";
+	    }
 		
 		model.put("name", user.getName());
-		model.put("password", hash);
+		model.put("password", hexString.toString());
 		
 		return "redirect:/welcome";
 	}
