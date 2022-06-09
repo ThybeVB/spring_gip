@@ -50,6 +50,7 @@ public class LoginController {
 	    
 	    boolean isValidUser = this.validateUser(user);
 	    if (!isValidUser) {
+	    	user.setPassword(null);
 	    	return "login";
 	    }
 		
