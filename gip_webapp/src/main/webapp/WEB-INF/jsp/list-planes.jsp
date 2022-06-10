@@ -11,7 +11,7 @@
       <div class="col-12 col-lg-4 pb-4 d-flex align-items-stretch">
         <div class="card">
           <img class="card-img-top" src="../../../plane-photos/${plane.id}/${plane.pictureUrl}" alt=""/>
-          <div class="card-body">
+          <div class="card-body d-flex flex-column">
             <h4 class="card-title mb-0">${plane.brand} ${plane.name}</h4>
             <h6 class="card-subtitle text-muted py-2">
             	<fmt:formatNumber value="${plane.price}" currencySymbol="&euro; " type="currency" maxFractionDigits="2" minIntegerDigits="2"/>
@@ -20,12 +20,17 @@
               ${plane.description}
             </p>
             <c:if test="${name != null}">
+            <div class="">
               <a href="/update-plane?id=${plane.id}" class="btn btn-outline-dark btn-sm p-2"><i class="fa fa-pen"></i></a>
               <a href="/delete-plane?id=${plane.id}" class="btn btn-outline-dark btn-sm p-2"><i class="fa fa-trash-alt"></i></a>
               <br>
+              </div>
             </c:if>
+            <div class="mt-auto">
             <a href="/plane-annuity-dialog?id=${plane.id}" class="btn btn-outline-dark mt-2">Aflossingstabel</a>
-          </div>
+            </div>
+            </div>
+  
         </div>
       </div>
     </c:forEach>

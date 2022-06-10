@@ -34,7 +34,7 @@ CREATE TABLE `airplane` (
   `picture_url` varchar(255) DEFAULT NULL,
   `picture` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,8 +43,33 @@ CREATE TABLE `airplane` (
 
 LOCK TABLES `airplane` WRITE;
 /*!40000 ALTER TABLE `airplane` DISABLE KEYS */;
-INSERT INTO `airplane` VALUES (3,'Antonov','De Antonov An-225 \"Mriya\" is een voormalig vrachtvliegtuig, ontworpen in de Oekraïense SSR door het ontwerpbureau Antonov. Gemeten naar maximum startgewicht was het het grootste vliegtuig ooit gebouwd.',0,0,'An-225 Mriya',0,300000000,'an225.jpg',NULL),(4,'Cessna','De Citation is een familie van zakenjets van Cessna die in 1972 begon met de ingebruikname van het eerste model. In de vijftig jaar na de eerste vlucht in 1969 werden meer dan 7.500 Citations afgeleverd, waarmee ze de grootste vloot van zakenjets vormden.',0,0,'Citation',0,27000000,'citationx.jpg',NULL),(5,'Eurofighter','De Eurofighter Typhoon is een gevechtsvliegtuig ontworpen en gebouwd door een Europees consortium bestaande uit de industrieën: EUROJET NETMA Alenia Aeronautica BAE Systems Construcciones Aeronáuticas European Aeronautic Defence and Space Company',0,0,'Typhoon',0,124000000,'German_eurofighter.jpg',NULL),(6,'General Dynamics','De F-16 Fighting Falcon is een eenmotorige multifunctionele straaljager die sinds 1979 veel gebruikt wordt. In onder andere Nederland en België was het de opvolger van de F-104 Starfighter. In België kwam de F-16 ook in de plaats van de Mirage 5. In Neder',0,0,'F-16 Fighting Falcon',0,35000000,'Belgian-Air-Force-F-16-Vador-3-1024x682.jpg',NULL),(15,'Marouane Air','pipi ',0,0,'100',0,5000,'funny.jpg',NULL);
+INSERT INTO `airplane` VALUES (3,'Antonov','De Antonov An-225 \"Mriya\" is een voormalig vrachtvliegtuig, ontworpen in de Oekraïense SSR door het ontwerpbureau Antonov. Gemeten naar maximum startgewicht was het het grootste vliegtuig ooit gebouwd.',0,0,'An-225 Mriya',0,300000000,'an225.jpg',NULL),(4,'Cessna','De Citation is een familie van zakenjets van Cessna die in 1972 begon met de ingebruikname van het eerste model. In de vijftig jaar na de eerste vlucht in 1969 werden meer dan 7.500 Citations afgeleverd, waarmee ze de grootste vloot van zakenjets vormden.',0,0,'Citation',0,27000000,'citationx.jpg',NULL),(5,'Eurofighter','De Eurofighter Typhoon is een gevechtsvliegtuig ontworpen en gebouwd door een Europees consortium bestaande uit de industrieën: EUROJET NETMA Alenia Aeronautica BAE Systems Construcciones Aeronáuticas European Aeronautic Defence and Space Company',0,0,'Typhoon',0,124000000,'German_eurofighter.jpg',NULL),(6,'General Dynamics','De F-16 Fighting Falcon is een eenmotorige multifunctionele straaljager die sinds 1979 veel gebruikt wordt. In onder andere Nederland en Belgi� was het de opvolger van de F-104 Starfighter. In Belgi� kwam de F-16 ook in de plaats van de Mirage 5.',0,0,'F-16 Fighting Falcon',0,35000000,'Belgian-Air-Force-F-16-Vador-3-1024x682.jpg',NULL),(16,'Boeing','De Boeing 737 is een tweemotorig narrow-body passagiersvliegtuig, dat sinds 1967 door Boeing wordt vervaardigd. Met meer dan 10.000 gebouwde toestellen is wereldwijd het bestverkochte verkeersvliegtuig.',0,0,'737',0,99700000,'boeing_737.jpg',NULL),(17,'Boeing','De Boeing B-17 Flying Fortress was een Amerikaanse viermotorig zware bommenwerper voor de lange afstand. Het door de firma Boeing in de jaren dertig ontworpen toestel was oorspronkelijk bedoeld voor kustpatrouilles.',0,0,'B-17 Flying Fortress',0,2600000,'boeing_b_17.jpg',NULL);
 /*!40000 ALTER TABLE `airplane` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `contact_form`
+--
+
+DROP TABLE IF EXISTS `contact_form`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `contact_form` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) DEFAULT NULL,
+  `message` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `contact_form`
+--
+
+LOCK TABLES `contact_form` WRITE;
+/*!40000 ALTER TABLE `contact_form` DISABLE KEYS */;
+/*!40000 ALTER TABLE `contact_form` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -81,4 +106,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-07 11:01:32
+-- Dump completed on 2022-06-10 14:13:47

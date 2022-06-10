@@ -39,8 +39,8 @@
 
         <div class="input-group col-lg py-3">
           <div class="custom-file">
-            <label class="custom-file-label" for="myfile">Kies een bestand (optioneel)</label>
-            <form:input type="file" class="custom-file-input" path="picture" id="picture" name="picture" />
+            <label class="custom-file-label" for="myfile">Kies een bestand (optioneel):</label>
+            <form:input type="file" class="custom-file-input form-control" path="picture" id="picture" name="picture" />
             <form:errors path="picture" cssClass="text-warning"></form:errors>
           </div>
         </div>
