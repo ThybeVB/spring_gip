@@ -19,18 +19,16 @@
             <p class="card-text">
               ${plane.description}
             </p>
+            <div class="mt-auto">
             <c:if test="${name != null}">
-            <div class="">
               <a href="/update-plane?id=${plane.id}" class="btn btn-outline-dark btn-sm p-2"><i class="fa fa-pen"></i></a>
               <a href="/delete-plane?id=${plane.id}" class="btn btn-outline-dark btn-sm p-2"><i class="fa fa-trash-alt"></i></a>
-              <br>
-              </div>
+              <br>              
             </c:if>
-            <div class="mt-auto">
-            <a href="/plane-annuity-dialog?id=${plane.id}" class="btn btn-outline-dark mt-2">Aflossingstabel</a>
+            
+            <a href="/plane-annuity-dialog?id=${plane.id}" class="btn btn-outline-dark mt-2">Aflossingstabel</a>          
             </div>
-            </div>
-  
+  			</div>
         </div>
       </div>
     </c:forEach>
